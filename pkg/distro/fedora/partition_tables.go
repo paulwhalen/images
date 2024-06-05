@@ -450,8 +450,7 @@ var iotSimplifiedInstallerPartitionTables = distro.BasePartitionTableMap{
 			},
 			{
 				Size: 1 * common.GibiByte,
-				Type: disk.XBootLDRPartitionGUID,
-				UUID: disk.FilesystemDataUUID,
+				Type: "83",
 				Payload: &disk.Filesystem{
 					Type:         "ext4",
 					Mountpoint:   "/boot",
@@ -462,8 +461,7 @@ var iotSimplifiedInstallerPartitionTables = distro.BasePartitionTableMap{
 				},
 			},
 			{
-				Type: disk.FilesystemDataGUID,
-				UUID: disk.RootPartitionUUID,
+				Type: "83",
 				Payload: &disk.LUKSContainer{
 					Label:      "crypt_root",
 					Cipher:     "cipher_null",
